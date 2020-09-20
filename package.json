@@ -2,7 +2,7 @@
     "name": "halfwidth-forms-converter",
     "displayName": "Halfwidth Forms Converter",
     "description": "Convert Full Width Forms To Half Width Forms",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "HanleyLee",
     "author": "Hanley Lee (https://hanleylee.com)",
     "homepage": "https://github.com/HanleyLee/Halfwidth-Forms-Converter",
@@ -17,7 +17,7 @@
         "vscode": "^1.49.0"
     },
     "categories": [
-        "Other"
+        "Formatters"
     ],
     "activationEvents": [
         "onCommand:convert_to_half.convert"
