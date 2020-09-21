@@ -22,19 +22,18 @@ function activate(context) {
         // just spacing selected text if has
         if (selectedText) {
             editor.edit((builder) => {
-                let panguText = pangu.spacing(selectedText).replace('。', '.')
-                panguText = panguText.replace('，', ',')
-                panguText = panguText.replace('。', '.')
-                panguText = panguText.replace('：', ':')
-                panguText = panguText.replace('？', '?')
-                panguText = panguText.replace('；', ';')
-                panguText = panguText.replace('、', ',')
-                panguText = panguText.replace('（', '(')
-                panguText = panguText.replace('）', ')')
+                let panguText = pangu.spacing(selectedText)
+                panguText = panguText.replace(/，/g, ', ')
+                panguText = panguText.replace(/。/g, '. ')
+                panguText = panguText.replace(/：/g, ': ')
+                panguText = panguText.replace(/？/g, '? ')
+                panguText = panguText.replace(/；/g, '; ')
+                panguText = panguText.replace(/、/g, ', ')
+                panguText = panguText.replace(/（/g, ' (')
+                panguText = panguText.replace(/）/g, ') ')
 
                 builder.replace(selection, panguText)
             })
-            return
         } else {
             const lineCount = document.lineCount
 
@@ -47,14 +46,14 @@ function activate(context) {
                         builder.replace(textLine.range, '')
                     } else {
                         let panguText = pangu.spacing(oriTrimText)
-                        panguText = panguText.replace('，', ', ')
-                        panguText = panguText.replace('。', '. ')
-                        panguText = panguText.replace('：', ': ')
-                        panguText = panguText.replace('？', '? ')
-                        panguText = panguText.replace('；', '; ')
-                        panguText = panguText.replace('、', ', ')
-                        panguText = panguText.replace('（', ' (')
-                        panguText = panguText.replace('）', ') ')
+                        panguText = panguText.replace(/，/g, ', ')
+                        panguText = panguText.replace(/。/g, '. ')
+                        panguText = panguText.replace(/：/g, ': ')
+                        panguText = panguText.replace(/？/g, '? ')
+                        panguText = panguText.replace(/；/g, '; ')
+                        panguText = panguText.replace(/、/g, ', ')
+                        panguText = panguText.replace(/（/g, ' (')
+                        panguText = panguText.replace(/）/g, ') ')
 
                         builder.replace(textLine.range, panguText)
                     }
