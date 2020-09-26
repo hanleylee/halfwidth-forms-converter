@@ -31,6 +31,7 @@ function activate(context) {
                 panguText = panguText.replace(/、/g, ', ')
                 panguText = panguText.replace(/（/g, ' (')
                 panguText = panguText.replace(/）/g, ') ')
+                panguText = panguText.replace(/！/g, '! ')
 
                 builder.replace(selection, panguText)
             })
@@ -54,6 +55,7 @@ function activate(context) {
                         panguText = panguText.replace(/、/g, ', ')
                         panguText = panguText.replace(/（/g, ' (')
                         panguText = panguText.replace(/）/g, ') ')
+                        panguText = panguText.replace(/！/g, '! ')
 
                         builder.replace(textLine.range, panguText)
                     }
