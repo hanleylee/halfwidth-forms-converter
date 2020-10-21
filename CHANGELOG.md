@@ -1,9 +1,3 @@
 # Change Log
 
-All notable changes to the "halfwidth-forms-converter" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+修正 README 文档
